@@ -314,6 +314,7 @@ oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_
 
 bool oled_task_user(void) {
     /* KEYBOARD PET VARIABLES START */
+    current_wpm   = get_current_wpm(); //keep it, you need it for walk/run animation
     led_usb_state = host_keyboard_led_state();
 
     /* KEYBOARD PET VARIABLES END */
